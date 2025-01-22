@@ -51,16 +51,17 @@ const Skills = () => {
       overflow-hidden"
       style={{ backgroundSize: "400% 400%" }}
     >
-      <div className="relative z-10 py-10 px-5">
-        <h1 className="text-4xl font-bold text-center mb-10 text-white">
+            <div className="relative z-10 py-10 px-5">
+        <h1 className="skills-title text-4xl font-bold text-center mb-10 text-white">
           My Skills
         </h1>
+
         {/* Buttons to toggle between categories */}
-        <div className="flex justify-center gap-4 mb-10">
+        <div className="category-buttons flex justify-center gap-4 flex-wrap mb-10">
           {Object.keys(skills).map((category) => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-lg text-lg font-semibold ${
+              className={`px-4 py-2 rounded-lg text-lg font-semibold transition-all ${
                 selectedCategory === category
                   ? "bg-white text-blue-500 shadow-lg"
                   : "bg-blue-500 text-white hover:bg-blue-600"
@@ -83,25 +84,25 @@ const Skills = () => {
           {Object.entries(skills)
             .filter(([mainHeading]) => mainHeading === selectedCategory)
             .map(([mainHeading, subSkills]) => (
-              <div key={mainHeading} className="space-y-4">
-                <h2 className="text-3xl font-semibold text-white flex items-center">
+              <div key={mainHeading} className="skills-category space-y-4">
+                <h2 className="category-title text-3xl font-semibold text-white flex items-center">
                   <span className="border-l-4 border-white h-full mr-3"></span>
                   {mainHeading}
                 </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="skills-cards grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                   {subSkills.map((skill, index) => (
                     <div
                       key={`${skill.subHeading}-${index}`}
-                      className="bg-white shadow-md rounded-lg p-6 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 hover:bg-purple-50"
+                      className="skill-card bg-white shadow-md rounded-lg p-6 hover:shadow-xl hover:-translate-y-2 transform transition-all duration-300 hover:bg-purple-50"
                     >
-                      <h3 className="text-xl font-bold text-gray-800">
+                      <h3 className="skill-title text-xl font-bold text-gray-800">
                         {skill.subHeading}
                       </h3>
                       <div>
                         {skill.skillDetails.map((detail, index) => (
                           <p
                             key={index}
-                            className="text-gray-600 mt-2 text-justify"
+                            className="skill-detail text-gray-600 mt-2 text-justify"
                           >
                             {detail}
                           </p>
