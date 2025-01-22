@@ -33,7 +33,7 @@ const AdminPanelModal = ({
   useEffect(() => {
     const fetchAboutContent = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/about");
+        const response = await axios.get("http://18.185.103.250:5000/api/about");
         setAboutContent(response.data.content || "");
       } catch (error) {
         console.error("Error fetching About content:", error.message);
@@ -46,7 +46,7 @@ const AdminPanelModal = ({
   // Handle saving About content
   const handleSaveAbout = async () => {
     try {
-      await axios.put("http://localhost:5000/api/about", { content: aboutContent });
+      await axios.put("http://18.185.103.250:5000/api/about", { content: aboutContent });
       alert("About content updated successfully!");
     } catch (error) {
       console.error("Error updating About content:", error.message);
@@ -132,7 +132,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/experiences", newExperience);
+      const response = await axios.post("http://18.185.103.250:5000/api/experiences", newExperience);
       alert("Experience added successfully!");
       resetForm();
     } catch (error) {
@@ -149,7 +149,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("http://localhost:5000/api/experiences", {
+      const response = await axios.delete("http://18.185.103.250:5000/api/experiences", {
         data: {
           position: position.trim(),
           company: company.trim(),
@@ -183,7 +183,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/projects", newProject);
+      const response = await axios.post("http://18.185.103.250:5000/api/projects", newProject);
       alert("Project added successfully!");
       resetProjectForm();
     } catch (error) {
@@ -200,7 +200,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("http://localhost:5000/api/projects", {
+      const response = await axios.delete("http://18.185.103.250:5000/api/projects", {
         data: { title: projectTitle },
       });
 
@@ -242,7 +242,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("http://localhost:5000/api/skills", newSkill);
+      const response = await axios.post("http://18.185.103.250:5000/api/skills", newSkill);
       alert("Skill added successfully!");
       addSkill(response.data); // Add the skill to the parent state
       resetSkillForm();
@@ -260,7 +260,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("http://localhost:5000/api/skills", {
+      const response = await axios.delete("http://18.185.103.250:5000/api/skills", {
         data: { subHeading },
         headers: {
           "Content-Type": "application/json",
