@@ -1,0 +1,158 @@
+
+
+/* Page Styling */
+.experience-page {
+  background-color: #f8f9fa;
+  padding: 50px;
+}
+
+/* Page Styling */
+.experience-page {
+  background-size: 400% 400%;
+  animation: gradientBackground 12s ease infinite;
+  padding: 50px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Gradient Background Animation */
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Title Styling */
+.experience-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInTitle 1s ease-in-out;
+}
+
+@keyframes fadeInTitle {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Experience Container */
+.experience-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 100%;
+  max-width: 1050px;
+  line-height: 1.6;
+}
+
+/* Row Styling */
+.experience-row {
+  background: linear-gradient(135deg, #ffffff, #f1f1f1);
+  border-radius: 15px;
+  padding: 20px 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-row:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+/* Left Section */
+.experience-left {
+  flex: 1;
+  min-width: 250px;
+}
+
+.experience-position {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-shadow: 1px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.experience-company,
+.experience-duration {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+/* Right Section */
+.experience-right {
+  flex: 2;
+  min-width: 250px;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.experience-responsibilities {
+  list-style: disc;
+  margin-left: 20px;
+  color: #555;
+}
+
+.experience-responsibilities li {
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .experience-row {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .experience-left,
+  .experience-right {
+    flex: none;
+    min-width: 100%;
+  }
+
+  .experience-title {
+    font-size: 2.5rem;
+  }
+
+  .experience-position {
+    font-size: 1.5rem;
+  }
+
+  .experience-description {
+    font-size: 0.9rem;
+  }
+
+  .experience-company,
+  .experience-duration {
+    font-size: 0.9rem;
+  }
+
+  .experience-responsibilities li {
+    font-size: 0.9rem;
+  }
+}

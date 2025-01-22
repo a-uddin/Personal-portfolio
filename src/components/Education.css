@@ -1,0 +1,187 @@
+/* Education page styling with animated background */
+.education-page {
+  background: linear-gradient(-45deg, #6a11cb, #2575fc, #43e97b, #38ef7d);
+  background-size: 400% 400%;
+  animation: gradientBackground 15s ease infinite;
+  padding: 50px 20px;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Background animation keyframes */
+@keyframes gradientBackground {
+  0% {
+      background-position: 0% 50%;
+  }
+  50% {
+      background-position: 100% 50%;
+  }
+  100% {
+      background-position: 0% 50%;
+  }
+}
+
+/* Title styling */
+.education-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);
+  animation: fadeInPage 1s ease-in-out;
+}
+
+/* Fade-in animation for the title */
+@keyframes fadeInPage {
+  0% {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  100% {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Education container */
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+  position: relative;
+}
+
+/* Card hover animation */
+@keyframes cardHoverAnimation {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(-5px);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Education card styles */
+.education-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  position: relative;
+  width: 60%;
+  max-width: 650px;
+  z-index: 2;
+  min-height: 280px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  animation: cardHoverAnimation 6s ease-in-out infinite;
+  letter-spacing: 0.029rem;
+}
+
+/* On hover effects */
+.education-card:hover {
+  transform: scale(1.08);
+  box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.3);
+  background: rgba(255, 255, 255, 0.95);
+  animation: none;
+}
+
+/* Left and right alignment */
+.left-card {
+  align-self: flex-start;
+}
+
+.right-card {
+  align-self: flex-end;
+}
+
+/* Content inside the card */
+.education-content {
+  max-width: 100%;
+}
+
+.education-degree {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #222;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.education-institution {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #444;
+  margin-bottom: 6px;
+}
+
+.education-location {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.education-duration {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #888;
+  margin-bottom: 15px;
+}
+
+/* Skills inside the card */
+.education-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  letter-spacing: 0.09rem;
+}
+
+.education-skill {
+  background: linear-gradient(45deg, #30cfd0, #49f996);
+  color: #1f1e1e;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  font-family: roboto;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-skill:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .education-card {
+      width: 80%;
+  }
+
+  .education-title {
+      font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+      width: 90%;
+  }
+
+  .education-title {
+      font-size: 1.8rem;
+  }
+
+  .education-degree {
+      font-size: 1.4rem;
+  }
+}
