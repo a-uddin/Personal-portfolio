@@ -9,7 +9,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("http://18.185.103.250:5000/api/skills");
+        const response = await axios.get("http://anowar-uddin.com/api/skills");
         console.log("Fetched skills data:", response.data);
 
         if (Array.isArray(response.data)) {

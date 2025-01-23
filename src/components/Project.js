@@ -13,7 +13,7 @@ const Project = ({ isAuthenticated, promptLogin }) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("http://18.185.103.250:5000/api/projects");
+        const response = await axios.get("http://anowar-uddin.com/api/projects");
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -42,7 +42,7 @@ const handleDragEnd = async (event) => {
 
     // Save the updated order to the server
     try {
-      await axios.put("http://18.185.103.250:5000/api/projects/order", {
+      await axios.put("http://anowar-uddin.com/api/projects/order", {
         projects: updatedOrder.map((project) => project._id),
       });
       console.log("Project order saved successfully.");
