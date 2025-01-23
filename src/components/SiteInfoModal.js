@@ -20,7 +20,7 @@ const SiteInfoModal = ({ onClose }) => {
         I developed this portfolio website using React, Node.js, Express, Axios, JSX, MongoDB, and Mongoose.<br/> 
         For styling, I utilized Tailwind CSS and custom CSS to create a visually appealing and responsive design.<br/>
         And used AWS Lightsail, NGINX for hosting. <br/>
-        © 2025 Anowar Uddin. All rights reserved.
+        © 2025 Anowar Uddin | All rights reserved.
         </p>
         <button
           className="mt-4 bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded"

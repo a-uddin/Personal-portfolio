@@ -10,7 +10,7 @@ function About() {
   useEffect(() => {
     const fetchAboutContent = async () => {
       try {
-        const response = await axios.get("http://anowar-uddin.com/api/about");
+        const response = await axios.get("https://anowar-uddin.com/api/about");
         setContent(response.data.content || "");
       } catch (error) {
         console.error("Error fetching About content:", error.message);

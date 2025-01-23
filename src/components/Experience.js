@@ -16,7 +16,7 @@ const Experience = ({ isAuthenticated, promptLogin }) => {
     const fetchExperiences = async () => {
       try {
         const response = await axios.get(
-          "http://anowar-uddin.com/api/experiences"
+          "https://anowar-uddin.com/api/experiences"
         );
         setExperiences(response.data);
       } catch (error) {
@@ -46,7 +46,7 @@ const Experience = ({ isAuthenticated, promptLogin }) => {
 
       try {
         const response = await axios.put(
-          "http://anowar-uddin.com/api/experiences/order",
+          "https://anowar-uddin.com/api/experiences/order",
           {
             experiences: updatedOrder.map((exp) => exp._id),
           }

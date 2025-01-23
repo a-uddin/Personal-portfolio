@@ -51,7 +51,7 @@ function App() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/skills");
+        const response = await axios.get("https://anowar-uddin.com/api/skills");
         setSkills(response.data);
       } catch (error) {
         console.error("Error fetching skills:", error);
