@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import API_BASE_URL from "./ApiBaseURL"; // Localhost 5000 url
+
+
 
 const AdminPanelModal = ({
   onClose,
@@ -33,7 +36,7 @@ const AdminPanelModal = ({
   useEffect(() => {
     const fetchAboutContent = async () => {
       try {
-        const response = await axios.get("https://anowar-uddin.com/api/about");
+        const response = await axios.get(`${API_BASE_URL}/api/about`);
         setAboutContent(response.data.content || "");
       } catch (error) {
         console.error("Error fetching About content:", error.message);
@@ -46,7 +49,7 @@ const AdminPanelModal = ({
   // Handle saving About content
   const handleSaveAbout = async () => {
     try {
-      await axios.put("https://anowar-uddin.com/api/about", { content: aboutContent });
+      await axios.put(`${API_BASE_URL}/api/about`, { content: aboutContent });
       alert("About content updated successfully!");
     } catch (error) {
       console.error("Error updating About content:", error.message);
@@ -132,7 +135,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("https://anowar-uddin.com/api/experiences", newExperience);
+      const response = await axios.post(`${API_BASE_URL}/api/experiences`, newExperience);
       alert("Experience added successfully!");
       resetForm();
     } catch (error) {
@@ -149,7 +152,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("https://anowar-uddin.com/api/experiences", {
+      const response = await axios.delete(`${API_BASE_URL}/api/experiences`, {
         data: {
           position: position.trim(),
           company: company.trim(),
@@ -183,7 +186,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("https://anowar-uddin.com/api/projects", newProject);
+      const response = await axios.post(`${API_BASE_URL}/api/projects`, newProject);
       alert("Project added successfully!");
       resetProjectForm();
     } catch (error) {
@@ -200,7 +203,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("https://anowar-uddin.com/api/projects", {
+      const response = await axios.delete(`${API_BASE_URL}/api/projects`, {
         data: { title: projectTitle },
       });
 
@@ -242,7 +245,7 @@ const handleKeyDown = (e) => {
     };
 
     try {
-      const response = await axios.post("https://anowar-uddin.com/api/skills", newSkill);
+      const response = await axios.post(`${API_BASE_URL}/api/skills`, newSkill);
       alert("Skill added successfully!");
       addSkill(response.data); // Add the skill to the parent state
       resetSkillForm();
@@ -260,7 +263,7 @@ const handleKeyDown = (e) => {
     }
 
     try {
-      const response = await axios.delete("https://anowar-uddin.com/api/skills", {
+      const response = await axios.delete(`${API_BASE_URL}/api/skills`, {
         data: { subHeading },
         headers: {
           "Content-Type": "application/json",

@@ -4,6 +4,7 @@ import { DndContext, closestCenter } from "@dnd-kit/core";
 import { arrayMove, SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import SortableItem from "./SortableItem";
 import "./Project.css"; // Importing the new CSS file
+import API_BASE_URL from "./ApiBaseURL"; //Localhost 5000 url
 
 const Project = ({ isAuthenticated, promptLogin }) => {
   const [projects, setProjects] = useState([]);
@@ -13,7 +14,7 @@ const Project = ({ isAuthenticated, promptLogin }) => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await axios.get("https://anowar-uddin.com/api/projects");
+        const response = await axios.get(`${API_BASE_URL}/api/projects`);
         setProjects(response.data);
       } catch (error) {
         console.error("Error fetching projects:", error);
@@ -24,7 +25,7 @@ const Project = ({ isAuthenticated, promptLogin }) => {
   }, []);
 
   // Handle drag end
- // Handle drag end
+ 
 const handleDragEnd = async (event) => {
   if (!isAuthenticated) {
     return; // Prevent drag if not authenticated
@@ -42,7 +43,7 @@ const handleDragEnd = async (event) => {
 
     // Save the updated order to the server
     try {
-      await axios.put("https://anowar-uddin.com/api/projects/order", {
+      await axios.put(`${API_BASE_URL}/api/projects/order`, {
         projects: updatedOrder.map((project) => project._id),
       });
       console.log("Project order saved successfully.");
@@ -51,7 +52,6 @@ const handleDragEnd = async (event) => {
     }
   }
 };
-
 
   const handleLoadMore = () => {
     setVisibleCount((prevCount) => prevCount + 3); // Load 3 more projects each time

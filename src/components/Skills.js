@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import API_BASE_URL from "./ApiBaseURL"; // Localhost 5000 url
 
 const Skills = () => {
   const [skills, setSkills] = useState([]);
@@ -9,7 +10,7 @@ const Skills = () => {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("https://anowar-uddin.com/api/skills");
+        const response = await axios.get(`${API_BASE_URL}/api/skills`);
         console.log("Fetched skills data:", response.data);
 
         if (Array.isArray(response.data)) {

@@ -9,6 +9,9 @@ import Project from "./components/Project";
 import Education from "./components/Education";
 import Skills from "./components/Skills";
 import SiteInfoModal from "./components/SiteInfoModal";
+import API_BASE_URL from "./components/ApiBaseURL"; // Localhost 5000 url
+
+
 
 function App() {
   const [showPasswordModal, setShowPasswordModal] = useState(false);
@@ -51,7 +54,7 @@ function App() {
   useEffect(() => {
     const fetchSkills = async () => {
       try {
-        const response = await axios.get("https://anowar-uddin.com/api/skills");
+        const response = await axios.get(`${API_BASE_URL}/api/skills`);
         setSkills(response.data);
       } catch (error) {
         console.error("Error fetching skills:", error);

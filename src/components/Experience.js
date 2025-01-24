@@ -8,6 +8,7 @@ import {
 } from "@dnd-kit/sortable";
 import SortableItem from "./SortableItem";
 import "./Experience.css";
+import API_BASE_URL from "./ApiBaseURL"; // Localhost:5000 url
 
 const Experience = ({ isAuthenticated, promptLogin }) => {
   const [experiences, setExperiences] = useState([]);
@@ -16,7 +17,7 @@ const Experience = ({ isAuthenticated, promptLogin }) => {
     const fetchExperiences = async () => {
       try {
         const response = await axios.get(
-          "https://anowar-uddin.com/api/experiences"
+          `${API_BASE_URL}/api/experiences`
         );
         setExperiences(response.data);
       } catch (error) {
@@ -46,7 +47,7 @@ const Experience = ({ isAuthenticated, promptLogin }) => {
 
       try {
         const response = await axios.put(
-          "https://anowar-uddin.com/api/experiences/order",
+          `${API_BASE_URL}/api/experiences/order`,
           {
             experiences: updatedOrder.map((exp) => exp._id),
           }

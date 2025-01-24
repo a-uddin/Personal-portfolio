@@ -8,15 +8,30 @@ const About = require("./AboutSchema"); // Import the About schema
 const Skill = require("./SkillSchema"); // Import the Skill schema
 
 const app = express();
-app.use(cors());
+
+// cors configuration
+const corsOptions = {
+  origin:
+    process.env.NODE_ENV === "production"
+      ? "https://anowar-uddin.com"
+      : "http://localhost:3000",
+};
+app.use(cors(corsOptions));
+
 app.use(bodyParser.json());
 
 // Connect to MongoDB
 connectDB();
 
-// ==========================
-// Routes
-// ==========================
+const path = require("path");
+
+// Serve static files from the React frontend app
+app.use(express.static(path.join(__dirname, "../build")));
+
+// Handle any requests that don't match the API routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
+});
 
 // ==========================
 // About Routes
@@ -98,12 +113,9 @@ app.delete("/api/experiences", async (req, res) => {
     });
 
     if (!deletedExperience) {
-      return res
-        .status(404)
-        .json({
-          message:
-            "No experience found with the provided Position and Company.",
-        });
+      return res.status(404).json({
+        message: "No experience found with the provided Position and Company.",
+      });
     }
 
     res.json({ message: "Experience deleted successfully." });

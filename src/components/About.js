@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import photo from "./photo.png"; // Replace with the correct path
 import axios from "axios";
+import API_BASE_URL from "./ApiBaseURL";
+
+//const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || "http://localhost:5000";
+
 
 function About() {
   const [content, setContent] = useState("");
@@ -10,7 +14,7 @@ function About() {
   useEffect(() => {
     const fetchAboutContent = async () => {
       try {
-        const response = await axios.get("https://anowar-uddin.com/api/about");
+        const response = await axios.get(`${API_BASE_URL}/api/about`);
         setContent(response.data.content || "");
       } catch (error) {
         console.error("Error fetching About content:", error.message);
