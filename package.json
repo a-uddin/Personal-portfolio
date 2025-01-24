@@ -22,7 +22,9 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "node src/Backend/server.js",
+    
+    "start": "react-scripts start --disable-eslint",
+
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
