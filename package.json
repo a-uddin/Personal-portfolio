@@ -27,6 +27,12 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+
+  "engines": {
+  "node": "20.12",
+  "npm": "10.5"
+},
+
   "eslintConfig": {
     "extends": [
       "react-app",
