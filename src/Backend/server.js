@@ -13,9 +13,11 @@ const app = express();
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? "https://anowar-uddin.com"
+      ? "https://mern-portfolio-anowar-da4ee719074b.herokuapp.com"
       : "http://localhost:3000",
 };
+app.use(cors(corsOptions));
+
 app.use(cors(corsOptions));
 
 app.use(bodyParser.json());
