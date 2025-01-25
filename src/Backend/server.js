@@ -13,7 +13,7 @@ const app = express();
 const corsOptions = {
   origin:
     process.env.NODE_ENV === "production"
-      ? "https://mern-portfolio-anowar-da4ee719074b.herokuapp.com"
+      ? "https://anowar-uddin.com"
       : "http://localhost:3000",
 };
 app.use(cors(corsOptions));
@@ -25,16 +25,16 @@ app.use(bodyParser.json());
 // Connect to MongoDB
 connectDB();
 
-const path = require("path");
+ const path = require("path");
 
 // Serve static files from the React frontend app
-app.use(express.static(path.join(__dirname, "../build")));
+ app.use(express.static(path.join(__dirname, "../build")));
 
 // Handle any requests that don't match the API routes
-app.get("*", (req, res) => {
+ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build", "index.html"));
 });
-
+ 
 // ==========================
 // About Routes
 // ==========================

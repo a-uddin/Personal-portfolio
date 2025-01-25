@@ -1,1 +1,1 @@
-ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-eu-central-1.pem" bitnami@18.185.103.250
+ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-us-east-1.pem" ubuntu@44.200.51.80

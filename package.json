@@ -10,11 +10,13 @@
     "body-parser": "^1.20.3",
     "bootstrap": "^5.3.3",
     "cors": "^2.8.5",
+    "cra-template": "1.2.0",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "framer-motion": "^11.17.0",
     "mongoose": "^8.9.4",
-    "react": "^18.3.0",
-    "react-dom": "^18.3.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-router-dom": "^7.1.1",
     "react-scripts": "5.0.1",
     "react-tsparticles": "^2.12.2",
@@ -22,19 +24,15 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    
     "start": "react-scripts start --disable-eslint",
-
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-
   "engines": {
-  "node": "20.12",
-  "npm": "10.5"
-},
-
+    "node": "20.12",
+    "npm": "10.5"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
