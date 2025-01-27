@@ -1,1 +1,4 @@
-ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-us-east-1.pem" ubuntu@44.200.51.80
+ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-us-east-1.pem" ubuntu@18.215.129.118
+
+// nginx configuration
+sudo nano /etc/nginx/sites-available/default

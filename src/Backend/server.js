@@ -1,5 +1,4 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const cors = require("cors");
 const connectDB = require("./db");
 const Experience = require("./ExperienceSchema");
@@ -18,22 +17,14 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 
-app.use(cors(corsOptions));
 
-app.use(bodyParser.json());
+app.use(express.json());
+
 
 // Connect to MongoDB
 connectDB();
 
- const path = require("path");
-
-// Serve static files from the React frontend app
- app.use(express.static(path.join(__dirname, "../build")));
-
-// Handle any requests that don't match the API routes
- app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
+const path = require("path");
  
 // ==========================
 // About Routes
@@ -322,6 +313,15 @@ app.delete("/api/skills", async (req, res) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
+});
+
+// Serve static files from the React frontend app
+const path = require("path");
+app.use(express.static(path.join(__dirname, "../build")));
+
+// Handle any requests that don't match the API routes
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../build", "index.html"));
 });
 
 // ==========================
