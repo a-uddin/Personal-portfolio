@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 //import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import Header from "./components/Header";
 import About from "./components/About";
@@ -27,6 +28,7 @@ function App() {
   const [skills, setSkills] = useState([]); // Global state for skills
   const [showSiteInfo, setShowSiteInfo] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
+  const navigate = useNavigate();
 
   // ---------Scroll up Event START-----------
 
@@ -135,9 +137,7 @@ function App() {
                     </p>
                     <button
                       className="mt-6 bg-green-500 hover:bg-green-700 text-white py-2 px-4 rounded"
-                      onClick={() => {
-                        window.location.href = "/about";
-                      }}
+                      onClick={() => navigate("/about")}
                     >
                       Learn More
                     </button>
