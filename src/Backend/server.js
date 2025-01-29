@@ -316,13 +316,13 @@ app.delete("/api/skills", async (req, res) => {
 });
 
 // Serve static files from the React frontend app
-const path = require("path");
-app.use(express.static(path.join(__dirname, "../build")));
+/* const path = require("path");
+app.use(express.static(path.join(__dirname, "../build"))); */
 
 // Handle any requests that don't match the API routes
-app.get("*", (req, res) => {
+/* app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../build", "index.html"));
-});
+}); */
 
 // ==========================
 // Server Setup

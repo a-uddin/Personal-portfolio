@@ -117,7 +117,7 @@ const handleDragEnd = async (event) => {
           </SortableContext>
         </DndContext>
       ) : (
-        visibleProjects.map((project) => (
+        (visibleProjects ||[]) .map((project) => (
           <div key={project._id} className="project-card">
             <h3 className="project-title">{project.title}</h3>
             <p>
