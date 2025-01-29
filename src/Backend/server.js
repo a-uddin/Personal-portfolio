@@ -9,13 +9,20 @@ const Skill = require("./SkillSchema"); // Import the Skill schema
 const app = express();
 
 // cors configuration
-const corsOptions = {
-  origin:
-    process.env.NODE_ENV === "production"
-      ? "https://anowar-uddin.com"
-      : "http://localhost:3000",
-};
-app.use(cors(corsOptions));
+const allowedOrigins = [
+  "https://personal-portfolio-1-hjko.onrender.com",  // Your frontend on Render
+  "https://www.anowar-uddin.com" // Your custom domain
+];
+
+app.use(cors({
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("CORS policy does not allow this origin."));
+    }
+  }
+}));
 
 
 app.use(express.json());
