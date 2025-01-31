@@ -68,9 +68,9 @@ const Experience = ({ isAuthenticated, promptLogin }) => {
     }
   };
 
-  if (!experiences || experiences.length === 0) {
+/*   if (!experiences || experiences.length === 0) {
     return <p>No experiences to display.</p>;
-  }
+  } */
 
   return (
     <div

@@ -57,9 +57,9 @@ const handleDragEnd = async (event) => {
     setVisibleCount((prevCount) => prevCount + 3); // Load 3 more projects each time
   };
 
-  if (projects.length === 0) {
+ /*  if (projects.length === 0) {
     return <p>No projects to display.</p>;
-  }
+  } */
 
   const visibleProjects = projects.slice(0, visibleCount);
 

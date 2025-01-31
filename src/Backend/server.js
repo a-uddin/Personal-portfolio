@@ -10,8 +10,8 @@ const app = express();
 
 // cors configuration
 const allowedOrigins = [
-  "https://personal-portfolio-1-hjko.onrender.com",  // Your frontend on Render
-  "https://www.anowar-uddin.com" // Your custom domain
+  "https://personal-portfolio-1-hjko.onrender.com",  // frontend on Render
+  "https://www.anowar-uddin.com" // custom domain
 ];
 
 app.use(cors({
@@ -134,7 +134,7 @@ app.put("/api/experiences/order", async (req, res) => {
   }
 
   try {
-    // Update each experience's order in the database (you may need an "order" field in your schema)
+    // Update each experience's order in the database 
     for (let i = 0; i < experiences.length; i++) {
       await Experience.findByIdAndUpdate(experiences[i], { order: i });
     }
