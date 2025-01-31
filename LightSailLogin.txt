@@ -1,5 +1,6 @@
 Lightsail Login: 
-	ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-us-east-1.pem" ubuntu@	18.215.129.118
+	ssh -i "C:/Users/THINKPAD/Downloads/LightsailDefaultKey-us-east-1.pem" ubuntu@18.215.129.118
+
 
 
 venv\Scripts\activate
