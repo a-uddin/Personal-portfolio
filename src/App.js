@@ -130,7 +130,7 @@ function App() {
                 <main className="h-screen text-white flex items-center justify-center animated-bg">
                   <div className="text-center">
                     <h1 className="text-5xl font-bold">
-                      Welcome to My Portfolio
+                      Welcome to My website
                     </h1>
                     <p className="text-xl mt-4">
                       Cloud Engineer | Full Stack Developer
