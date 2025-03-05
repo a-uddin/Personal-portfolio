@@ -85,7 +85,7 @@ function App() {
   };
 
   const verifyPassword = () => {
-    if (password === "admin123") {
+    if (password === "%@Anowar3453()%") {
       setShowPasswordModal(false);
       setShowAdminPanel(true);
       setPasswordError("");
