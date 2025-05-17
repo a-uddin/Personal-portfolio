@@ -1,75 +1,34 @@
-<<<<<<< HEAD
-# Getting Started with Create React App
+<hr>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h2>🌐 Personal Portfolio Website</h2>
 
-## Available Scripts
+<p><strong>Technologies:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js), AWS Lightsail, PM2, Nginx, SSL (Let's Encrypt), GitHub Actions, Drag-and-Drop UI</p>
 
-In the project directory, you can run:
+<h3>📌 Overview</h3>
+<p>
+A dynamic and fully responsive portfolio website built to showcase professional experience, technical skills, and project highlights. Developed as a side project using the MERN stack, the system features an intuitive Admin Dashboard and real-time content management.
+</p>
 
-### `npm start`
+<h3>💡 Key Features</h3>
+<ul>
+  <li>Interactive Admin Dashboard to create, update, and manage portfolio sections dynamically.</li>
+  <li>Drag-and-drop functionality for reordering sections—ensuring flexibility and customization.</li>
+  <li>Modern React UI with animations, responsiveness, and clean design principles.</li>
+  <li>RESTful APIs powered by Node.js and Express.js for content management.</li>
+  <li>MongoDB Atlas integration for seamless, scalable cloud-based data storage.</li>
+  <li>Frontend hosted on <strong>Render</strong> and backend deployed on <strong>AWS Lightsail</strong>.</li>
+  <li>PM2 for backend process management and NGINX as a reverse proxy.</li>
+  <li>SSL certificate configured using Let’s Encrypt for secure HTTPS access.</li>
+  <li>CI/CD enabled via GitHub Actions for automatic deployments on code updates.</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<h3>🏆 Outcome</h3>
+<p>
+Successfully launched a self-managed, full-stack portfolio website, demonstrating strong capabilities in cloud deployment, DevOps, UI/UX engineering, and backend API design.
+</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
-# Personal-portfolio
-I have built this personal portfolio website using MERN.  
->>>>>>> df43839e7f26456277ce4fff5a7fd6cd1f2c8e20
+<h3>🔗 Links</h3>
+<ul>
+  <li><strong>Live Site:</strong> <a href="https://www.anowar-uddin.com" target="_blank">www.anowar-uddin.com</a></li>
+  <li><strong>GitHub Repo:</strong> <a href="https://github.com/a-uddin/Personal-portfolio" target="_blank">Personal Portfolio GitHub</a></li>
+</ul>
