@@ -2,7 +2,7 @@
 
 <h2>🌐 Personal Portfolio Website</h2>
 
-<p><strong>Technologies:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js), AWS Lightsail, PM2, Nginx, SSL (Let's Encrypt), GitHub Actions, Drag-and-Drop UI.</p>
+<p><strong>Technologies:</strong> MERN Stack (MongoDB, Express.js, React.js, Node.js), AWS Lightsail, PM2, Nginx, SSL (Let's Encrypt), GitHub Actions, Drag-and-Drop UI</p>
 
 <h3>📌 Overview</h3>
 <p>
